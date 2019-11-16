@@ -1,0 +1,18 @@
+entity Uzivatel{
+	firstName String,
+	lastName String,
+}
+
+entity Role{
+	pozice String
+}
+
+paginate Role with infinite-scroll
+paginate User with pagination
+
+service all with serviceImpl
+
+relationship OneToOne {
+	Uzivatel{pozice} to Role
+}
+
